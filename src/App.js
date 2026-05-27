@@ -6,7 +6,7 @@ import Recommended from "./Recommended/Recommended";
 function App() {
   return (
     <>
-      <Nav />;
+      <Nav />
       <Products />
       <Recommended />
     </>
