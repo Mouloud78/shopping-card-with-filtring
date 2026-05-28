@@ -11,7 +11,7 @@ const data = [
     prevPrice: "$140,00",
     newPrice: "120",
     company: "Nike",
-    color: "white",
+    color: "red",
     category: "sneakers",
   },
 
@@ -47,7 +47,7 @@ const data = [
     prevPrice: "$110,00",
     newPrice: "85",
     company: "Reebok",
-    color: "white",
+    color: "black",
     category: "casual",
   },
 
@@ -59,7 +59,7 @@ const data = [
     prevPrice: "$90,00",
     newPrice: "70",
     company: "Converse",
-    color: "black",
+    color: "white",
     category: "casual",
   },
 
@@ -107,7 +107,7 @@ const data = [
     prevPrice: "$300,00",
     newPrice: "260",
     company: "Nike",
-    color: "red",
+    color: "white",
     category: "basketball",
   },
 

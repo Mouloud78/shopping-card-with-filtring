@@ -57,10 +57,9 @@ body {
 
 .main-content {
   flex: 1;
-
   padding: 25px;
 
-  overflow: hidden;
+  min-width: 0; /* 🔥 IMPORTANT */
 }
 
 /* =========================
@@ -98,6 +97,33 @@ nav {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #999;
+}
+
+.menu-btn {
+  position: fixed;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 1000;
+
+  border: none;
+  background: black;
+  color: white;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #333;
 }
 
 /* =========================

@@ -11,6 +11,7 @@ import Card from "./components/Card";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   //Input filter
   const [query, setQuery] = useState("");
@@ -18,13 +19,15 @@ function App() {
     setQuery(event.target.value);
   };
 
-  const filtedItems = products.filter((product) =>
-    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1),
-  );
-
-  // const filtedItems = products.filter((product) =>
-  //   product.title.toLowerCase().includes(query.toLowerCase()),
+  // const filtedItems = products.filter(
+  //   (product) =>
+  //     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==
+  //     -1,
   // );
+
+  const filtedItems = products.filter((product) =>
+    product.title.toLowerCase().includes(query.toLowerCase()),
+  );
 
   // Radio Filter
   const handleChange = (event) => {
@@ -57,6 +60,7 @@ function App() {
 
     console.log(filteredProducts);
     console.log("selected =", selected);
+
     return filteredProducts.map(
       ({ img, title, star, reviews, prevPrice, newPrice }) => (
         <Card
@@ -76,11 +80,19 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar handleChange={handleChange} />
+      <button className="menu-btn" onClick={() => setShowSidebar(!showSidebar)}>
+        ☰
+      </button>
+
+      {showSidebar && (
+        <Sidebar handleChange={handleChange} showSidebar={showSidebar} />
+      )}
 
       <main className="main-content">
         <Nav query={query} handleInputChange={handleInputChange} />
+
         <Recommended handleClick={handleClick} />
+
         <Products result={result} />
       </main>
     </div>

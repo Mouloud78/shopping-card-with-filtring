@@ -1,8 +1,10 @@
 .recommended-flex {
   display: flex;
-  margin-left: 20rem;
-}
+  flex-wrap: wrap;
+  gap: 10px;
 
+  padding-left: 20rem;
+}
 .recommended-title {
   margin-left: 20rem;
   margin-bottom: 20px;
@@ -20,4 +22,16 @@
   border-radius: 5px;
   color: #323232;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .recommended-flex {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .btns {
+    flex: 0 0 auto;
+  }
 }
