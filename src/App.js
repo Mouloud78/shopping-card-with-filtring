@@ -22,6 +22,10 @@ function App() {
     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1),
   );
 
+  // const filtedItems = products.filter((product) =>
+  //   product.title.toLowerCase().includes(query.toLowerCase()),
+  // );
+
   // Radio Filter
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -51,13 +55,16 @@ function App() {
       );
     }
 
+    console.log(filteredProducts);
+    console.log("selected =", selected);
     return filteredProducts.map(
       ({ img, title, star, reviews, prevPrice, newPrice }) => (
         <Card
-          key={Math.random()}
+          key={title}
           img={img}
           title={title}
           star={star}
+          reviews={reviews}
           prevPrice={prevPrice}
           newPrice={newPrice}
         />
