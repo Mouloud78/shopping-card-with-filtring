@@ -1,6 +1,4 @@
 import "../Products/Products.css";
-
-import { AiFillStar } from "react-icons/ai";
 import { BsFillHeartFill } from "react-icons/bs";
 
 export default function Card({

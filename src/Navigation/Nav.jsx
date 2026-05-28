@@ -15,17 +15,11 @@ export default function Nav({ query, handleInputChange }) {
         />
 
         <div className="profile-container">
-          <a href="#">
-            <FiHeart className="nav-icons" />
-          </a>
+          <FiHeart className="nav-icons" />
 
-          <a href="#">
-            <AiOutlineShoppingCart className="nav-icons" />
-          </a>
+          <AiOutlineShoppingCart className="nav-icons" />
 
-          <a href="#">
-            <AiOutlineUser className="nav-icons" />
-          </a>
+          <AiOutlineUser className="nav-icons" />
         </div>
       </div>
     </div>
